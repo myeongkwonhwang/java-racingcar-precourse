@@ -23,6 +23,6 @@ public class CarNameTest {
     @DisplayName(value = "자동차이름 다섯글자 테스트")
     void carNameMaxLengthLessthanOrEqualTest() {
         CarName carName = new CarName("다섯글자다");
-        assertThat("다섯글자다").isEqualTo(carName.getName());
+        assertThat("다섯글자다").isEqualTo(carName.name());
     }
 }
