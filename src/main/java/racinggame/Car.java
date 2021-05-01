@@ -8,12 +8,18 @@ package racinggame;
 public class Car {
 
     private CarName carName;
+    private CarPosition carPosition;
 
     public Car(String carName) {
         this.carName = CarName.create(carName);
+        this.carPosition = CarPosition.create();
     }
 
     public String getCarName() {
         return this.carName.name();
+    }
+
+    public int getPosition() {
+        return this.carPosition.position();
     }
 }
