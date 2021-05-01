@@ -7,9 +7,13 @@ package racinggame;
  */
 public class Car {
 
-    private String carName;
+    private CarName carName;
 
     public Car(String carName) {
-        this.carName = carName;
+        this.carName = new CarName(carName);
+    }
+
+    public String getCarName() {
+        return carName.getName();
     }
 }
