@@ -10,12 +10,18 @@ import java.util.List;
 public class RacingGame {
 
     private RacingCars racingCars;
+    private RacingRound racingRound;
 
-    public RacingGame(List<String> carNames) {
+    public RacingGame(List<String> carNames, int round) {
         this.racingCars = new RacingCars(carNames);
+        this.racingRound = new RacingRound(round);
     }
 
     public int getJoinedCarCount() {
         return racingCars.getParticipatedCarCount();
+    }
+
+    public int getRacingRound() {
+        return this.racingRound.round();
     }
 }
