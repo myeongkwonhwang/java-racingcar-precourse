@@ -10,10 +10,10 @@ public class Car {
     private CarName carName;
 
     public Car(String carName) {
-        this.carName = new CarName(carName);
+        this.carName = CarName.create(carName);
     }
 
     public String getCarName() {
-        return carName.getName();
+        return this.carName.name();
     }
 }
