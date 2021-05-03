@@ -13,7 +13,7 @@ public class RacingRecord {
 
     private static final String ASKING_CARNAMES = "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)";
     private static final String ASKING_ROUND = "시도할 횟수는 몇회인가요?";
-    private static final String RESULT_PREFIX = "실행 결과\n";
+    private static final String RESULT_PREFIX = "실행 결과";
     private static final String DASH = "-";
     private static final String WIN_MESSAGE = "가 최종 우승했습니다.\n";
 
@@ -26,8 +26,8 @@ public class RacingRecord {
     }
 
     public static void resultMessage() {
-        System.out.println(RESULT_PREFIX);
         System.out.println();
+        System.out.println(RESULT_PREFIX);
     }
 
     public static void recode(List<Car> racingCars) {
