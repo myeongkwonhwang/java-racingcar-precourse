@@ -27,4 +27,10 @@ public class RacingCars {
     public int getParticipatedCarCount() {
         return this.cars.size();
     }
+
+    public void racing() {
+        for (Car car : this.cars) {
+            car.move();
+        }
+    }
 }

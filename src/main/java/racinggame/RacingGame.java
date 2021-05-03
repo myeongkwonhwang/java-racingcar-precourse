@@ -1,5 +1,6 @@
 package racinggame;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -25,7 +26,18 @@ public class RacingGame {
         return this.racingRound.round();
     }
 
-    public void round() {
+    public void start() {
+        while(getRacingRound() != 0){
+            nextRound();
+            racing();
+        }
+    }
+
+    private void racing() {
+        this.racingCars.racing();
+    }
+
+    private void nextRound() {
         this.racingRound.excuteRound();
     }
 }
