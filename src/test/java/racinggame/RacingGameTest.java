@@ -32,4 +32,13 @@ public class RacingGameTest {
         assertThat(3).isEqualTo(joinedCarCount);
         assertThat(5).isEqualTo(racingRound);
     }
+
+    @Test
+    @DisplayName(value = "라운드 진행 테스트")
+    void nextRoundTest() {
+        RacingGame racingGame = new RacingGame(Arrays.asList("hwang", "mk", "kwon"), 5);
+        assertThat(5).isEqualTo(racingGame.getRacingRound());
+        racingGame.round();
+        assertThat(4).isEqualTo(racingGame.getRacingRound());
+    }
 }
