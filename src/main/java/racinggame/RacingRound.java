@@ -7,13 +7,21 @@ package racinggame;
  */
 public class RacingRound {
 
-    private final int round;
+    private int round;
 
     public RacingRound(int round) {
         this.round = round;
     }
 
+    public static RacingRound create(int round){
+        return new RacingRound(round);
+    }
+
     public int round() {
         return this.round;
+    }
+
+    public void excuteRound() {
+        this.round -= 1;
     }
 }

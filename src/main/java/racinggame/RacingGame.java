@@ -14,7 +14,7 @@ public class RacingGame {
 
     public RacingGame(List<String> carNames, int round) {
         this.racingCars = new RacingCars(carNames);
-        this.racingRound = new RacingRound(round);
+        this.racingRound = RacingRound.create(round);
     }
 
     public int getJoinedCarCount() {
@@ -23,5 +23,9 @@ public class RacingGame {
 
     public int getRacingRound() {
         return this.racingRound.round();
+    }
+
+    public void round() {
+        this.racingRound.excuteRound();
     }
 }
