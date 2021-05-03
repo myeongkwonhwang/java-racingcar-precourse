@@ -27,8 +27,8 @@ public class CarPosition {
 
     public int movePosition(int value) {
         if(value >= GO_MOVE_VALUE){
-            this.position++;
+            position++;
         }
-        return this.position;
+        return position;
     }
 }

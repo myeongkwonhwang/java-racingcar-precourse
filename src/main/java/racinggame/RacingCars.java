@@ -25,12 +25,18 @@ public class RacingCars {
     }
 
     public int getParticipatedCarCount() {
-        return this.cars.size();
+        return cars.size();
     }
 
-    public void racing() {
-        for (Car car : this.cars) {
+    public List<Car> racing() {
+        for (Car car : cars) {
             car.move();
         }
+        return cars;
     }
+
+    public List<Car> getRacingCar() {
+        return cars;
+    }
+
 }
