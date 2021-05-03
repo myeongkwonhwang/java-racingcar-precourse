@@ -38,7 +38,7 @@ public class RacingGameTest {
     void nextRoundTest() {
         RacingGame racingGame = new RacingGame(Arrays.asList("hwang", "mk", "kwon"), 5);
         assertThat(5).isEqualTo(racingGame.getRacingRound());
-        racingGame.round();
-        assertThat(4).isEqualTo(racingGame.getRacingRound());
+        racingGame.start();
+        assertThat(0).isEqualTo(racingGame.getRacingRound());
     }
 }
