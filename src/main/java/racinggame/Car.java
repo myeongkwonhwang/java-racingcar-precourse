@@ -1,11 +1,15 @@
 package racinggame;
 
+import java.util.Random;
+
 /**
  * Created by mkhwang on 2021/05/02
  * Email : orange2652@gmail.com
  * Github : https://github.com/myeongkwonhwang
  */
 public class Car {
+
+    public static final int RANDOM_MAX = 9;
 
     private CarName carName;
     private CarPosition carPosition;
@@ -23,7 +27,11 @@ public class Car {
         return this.carPosition.position();
     }
 
-    public int move(int value) {
-        return this.carPosition.movePosition(value);
+    public int move() {
+        return this.carPosition.movePosition(generateRandomNumber());
+    }
+
+    private int generateRandomNumber() {
+        return new Random().nextInt(RANDOM_MAX + 1);
     }
 }
