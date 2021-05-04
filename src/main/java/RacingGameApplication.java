@@ -17,7 +17,5 @@ public class RacingGameApplication {
         RacingGame racingGame = new RacingGame(racingInput.getCarNames(), racingInput.getRound());
         racingGame.start();
 
-
-
     }
 }
